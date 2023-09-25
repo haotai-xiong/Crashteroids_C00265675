@@ -224,20 +224,20 @@ var assemblies = [
   {
     "name": "GameAssembly",
     "classes": [
-      { "name": "Asteroid", "rp": "GameAssembly_Asteroid.html", "cl": 16, "ucl": 3, "cal": 19, "tl": 60, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [84.2], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 16, "ucl": 3, "cal": 19, "tl": 60, "lcq": 84.2, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Game", "rp": "GameAssembly_Game.html", "cl": 40, "ucl": 0, "cal": 40, "tl": 97, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 40, "ucl": 0, "cal": 40, "tl": 97, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Laser", "rp": "GameAssembly_Laser.html", "cl": 13, "ucl": 3, "cal": 16, "tl": 56, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [81.2], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 13, "ucl": 3, "cal": 16, "tl": 56, "lcq": 81.2, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Ship", "rp": "GameAssembly_Ship.html", "cl": 28, "ucl": 37, "cal": 65, "tl": 130, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [43], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 28, "ucl": 37, "cal": 65, "tl": 130, "lcq": 43, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Spawner", "rp": "GameAssembly_Spawner.html", "cl": 40, "ucl": 6, "cal": 46, "tl": 123, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [86.9], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 40, "ucl": 6, "cal": 46, "tl": 123, "lcq": 86.9, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Asteroid", "rp": "GameAssembly_Asteroid.html", "cl": 16, "ucl": 3, "cal": 19, "tl": 60, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [84.2], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 16, "ucl": 3, "cal": 19, "tl": 60, "lcq": 84.2, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:20", "cl": 16, "ucl": 3, "cal": 19, "tl": 60, "lcq": 84.2, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:56", "cl": 16, "ucl": 3, "cal": 19, "tl": 60, "lcq": 84.2, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Game", "rp": "GameAssembly_Game.html", "cl": 40, "ucl": 0, "cal": 40, "tl": 97, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 40, "ucl": 0, "cal": 40, "tl": 97, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:20", "cl": 40, "ucl": 0, "cal": 40, "tl": 97, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:56", "cl": 40, "ucl": 0, "cal": 40, "tl": 97, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Laser", "rp": "GameAssembly_Laser.html", "cl": 13, "ucl": 3, "cal": 16, "tl": 56, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [81.2], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 13, "ucl": 3, "cal": 16, "tl": 56, "lcq": 81.2, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:20", "cl": 13, "ucl": 3, "cal": 16, "tl": 56, "lcq": 81.2, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:56", "cl": 13, "ucl": 3, "cal": 16, "tl": 56, "lcq": 81.2, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Ship", "rp": "GameAssembly_Ship.html", "cl": 36, "ucl": 29, "cal": 65, "tl": 130, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [43,49.2,55.3], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 28, "ucl": 37, "cal": 65, "tl": 130, "lcq": 43, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:20", "cl": 32, "ucl": 33, "cal": 65, "tl": 130, "lcq": 49.2, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:56", "cl": 36, "ucl": 29, "cal": 65, "tl": 130, "lcq": 55.3, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Spawner", "rp": "GameAssembly_Spawner.html", "cl": 40, "ucl": 6, "cal": 46, "tl": 123, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [86.9,82.6,86.9], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 40, "ucl": 6, "cal": 46, "tl": 123, "lcq": 86.9, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:20", "cl": 38, "ucl": 8, "cal": 46, "tl": 123, "lcq": 82.6, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:56", "cl": 40, "ucl": 6, "cal": 46, "tl": 123, "lcq": 86.9, "cb": 0, "tb": 0, "bcq": 0 }] },
     ]},
   {
     "name": "Tests",
     "classes": [
-      { "name": "TestSuite", "rp": "Tests_TestSuite.html", "cl": 46, "ucl": 0, "cal": 46, "tl": 102, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 46, "ucl": 0, "cal": 46, "tl": 102, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "TestSuite", "rp": "Tests_TestSuite.html", "cl": 58, "ucl": 0, "cal": 58, "tl": 126, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100,100,100], "bch": [], "hc": [{ "et": "25/09/2023 - 10:34:58", "cl": 46, "ucl": 0, "cal": 46, "tl": 102, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:20", "cl": 52, "ucl": 0, "cal": 52, "tl": 114, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "25/09/2023 - 10:45:56", "cl": 58, "ucl": 0, "cal": 58, "tl": 126, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
     ]},
 ];
 
-var historicCoverageExecutionTimes = [];
+var historicCoverageExecutionTimes = ["25/09/2023 - 10:45:20", "25/09/2023 - 10:34:58"];
 
 var riskHotspotMetrics = [
 ];
