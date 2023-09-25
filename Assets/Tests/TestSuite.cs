@@ -100,16 +100,28 @@ public class TestSuite
         Assert.AreEqual(game.score, 1);
     }
 
+
+    [UnityTest]
+    public IEnumerator ShipStaysWithinLimits()
+    {
+        game.GetShip().MoveLeft();
+        Vector3 t_Pos = game.GetShip().transform.localPosition;
+        yield return new WaitForSeconds(0.1f);
+
+        Assert.Greater(t_Pos.x, game.GetShip().MaxRight);
+        Assert.Less(t_Pos.x, game.GetShip().MaxLeft);
+    }
+
     [UnityTest]
     public IEnumerator ShipMoveLeft()
     {
         // 1
         Vector3 initPos = game.GetShip().transform.position;
         game.GetShip().MoveLeft();
-        yield return null;
+        yield return new WaitForSeconds(0.1f);
 
         // 2
-        Assert.Greater(initPos.x, game.GetShip().transform.position.x);
+        Assert.Less(game.GetShip().transform.position.x, initPos.x);
     }
 
     [UnityTest]
@@ -118,9 +130,20 @@ public class TestSuite
         // 1
         Vector3 initPos = game.GetShip().transform.position;
         game.GetShip().MoveRight();
-        yield return null;
+        yield return new WaitForSeconds(0.1f);
 
         // 2
-        Assert.Less(initPos.x, game.GetShip().transform.position.x);
+        Assert.Greater(game.GetShip().transform.position.x, initPos.x);
+    }
+
+    [UnityTest]
+    public IEnumerator AsteroidDestoryedAfterMovingOut()
+    {
+        // 1
+        GameObject asteroid = game.GetSpawner().SpawnAsteroid();
+        asteroid.transform.position = new Vector3(asteroid.gameObject.transform.position.x, asteroid.GetComponent<Asteroid>().MaxY, asteroid.gameObject.transform.position.z);
+        yield return new WaitForSeconds(0.1f);
+        // 2
+        UnityEngine.Assertions.Assert.IsNull(asteroid);
     }
 }

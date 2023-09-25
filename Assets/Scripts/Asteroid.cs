@@ -35,6 +35,8 @@ public class Asteroid : MonoBehaviour
     public float speed = 1;
     private readonly float maxY = -5;
 
+    public float MaxY { get { return maxY; } }
+
     private void Update()
     {
         Move();
