@@ -7,8 +7,6 @@ public class TestSuite
 {
     // 1
     private Game game;
-    private GameObject particleSystemGameObject;
-    private ParticleSystem particleSystem;
 
     [SetUp]
     public void Setup()
@@ -155,9 +153,9 @@ public class TestSuite
         // 1
         // GameObject parSys = Resources.Load<GameObject>("Prefabs/AsteroidExplosion");
 
-        GameObject parSys = game.GetSpawner().SpawnAsteroidExplosion(game.GetShip().transform.position);
-        particleSystemGameObject = Object.Instantiate(parSys);
-        particleSystem = particleSystemGameObject.GetComponent<ParticleSystem>();
+        GameObject temp_ParSys = game.GetSpawner().SpawnAsteroidExplosion(game.GetShip().transform.position);
+        GameObject particleSystemGameObject = Object.Instantiate(temp_ParSys);
+        ParticleSystem particleSystem = particleSystemGameObject.GetComponent<ParticleSystem>();
 
         // 2
         particleSystem.Play();
@@ -165,5 +163,25 @@ public class TestSuite
 
         // 3
         Assert.IsTrue(particleSystem.isPlaying);
+    }
+
+    [UnityTest]
+    public IEnumerator TestParticleSystemStops()
+    {
+        // 1
+        // GameObject parSys = Resources.Load<GameObject>("Prefabs/AsteroidExplosion");
+
+        GameObject temp_ParSys = game.GetSpawner().SpawnAsteroidExplosion(game.GetShip().transform.position);
+        GameObject particleSystemGameObject = Object.Instantiate(temp_ParSys);
+        ParticleSystem particleSystem = particleSystemGameObject.GetComponent<ParticleSystem>();
+        particleSystem.GetComponent<AutoDestroyParticleSystem>().enabled = false;
+
+        // 2
+        particleSystem.Play();
+        particleSystem.Stop();
+        yield return null;
+
+        // 3
+        Assert.IsFalse(particleSystem.isPlaying);
     }
 }
