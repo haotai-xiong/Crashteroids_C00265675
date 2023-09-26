@@ -42,6 +42,7 @@ public class Game : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private GameObject titleText;
     [SerializeField] private Spawner spawner;
+    [SerializeField] private GameObject asteroidExplosion;
 
     private static Game instance;
 
@@ -83,6 +84,13 @@ public class Game : MonoBehaviour
     {
         instance.score++;
         instance.scoreText.text = $"Score: {instance.score}";
+    }
+
+    public static void AsteroidExplode(Vector3 t_pos)
+    {
+        // Debug.Log("Asteroid Explode Function Triggered");
+        GameObject t_explosion = Instantiate(instance.asteroidExplosion, t_pos, Quaternion.identity);
+        t_explosion.SetActive(true);
     }
 
     public Ship GetShip()
