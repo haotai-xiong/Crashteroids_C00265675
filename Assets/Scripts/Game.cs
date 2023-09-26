@@ -46,6 +46,7 @@ public class Game : MonoBehaviour
 
     private static Game instance;
 
+
     private void Start()
     {
         instance = this;

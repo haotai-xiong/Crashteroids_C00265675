@@ -119,6 +119,7 @@ public class Ship : MonoBehaviour
     public void Explode()
     {
         mesh.enabled = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         explosion.SetActive(true);
         isDead = true;
     }
@@ -126,6 +127,7 @@ public class Ship : MonoBehaviour
     public void RepairShip()
     {
         explosion.SetActive(false);
+        gameObject.GetComponent<BoxCollider>().enabled = true;
         mesh.enabled = true;
         isDead = false;
     }
