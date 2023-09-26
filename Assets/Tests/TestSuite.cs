@@ -7,6 +7,8 @@ public class TestSuite
 {
     // 1
     private Game game;
+    private GameObject particleSystemGameObject;
+    private ParticleSystem particleSystem;
 
     [SetUp]
     public void Setup()
@@ -145,5 +147,23 @@ public class TestSuite
         yield return new WaitForSeconds(0.1f);
         // 2
         UnityEngine.Assertions.Assert.IsNull(asteroid);
+    }
+
+    [UnityTest]
+    public IEnumerator TestParticleSystemStarts()
+    {
+        // 1
+        // GameObject parSys = Resources.Load<GameObject>("Prefabs/AsteroidExplosion");
+
+        GameObject parSys = game.GetSpawner().SpawnAsteroidExplosion(game.GetShip().transform.position);
+        particleSystemGameObject = Object.Instantiate(parSys);
+        particleSystem = particleSystemGameObject.GetComponent<ParticleSystem>();
+
+        // 2
+        particleSystem.Play();
+        yield return null;
+
+        // 3
+        Assert.IsTrue(particleSystem.isPlaying);
     }
 }

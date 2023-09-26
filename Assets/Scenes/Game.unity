@@ -136,10 +136,6 @@ PrefabInstance:
       value: Game
       objectReference: {fileID: 0}
     - target: {fileID: 4055792686439916, guid: 3befbaa1b3b83f243a244d723a27c16e, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4055792686439916, guid: 3befbaa1b3b83f243a244d723a27c16e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -179,20 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4942684132430086, guid: 3befbaa1b3b83f243a244d723a27c16e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942684132430086, guid: 3befbaa1b3b83f243a244d723a27c16e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114338881368631318, guid: 3befbaa1b3b83f243a244d723a27c16e,
-        type: 3}
-      propertyPath: asteroidExplosion
-      value: 
-      objectReference: {fileID: 4802441564472870944, guid: eff2839d59333984c89e6359fce255b0,
-        type: 3}
     - target: {fileID: 224306037993809488, guid: 3befbaa1b3b83f243a244d723a27c16e,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -222,11 +204,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224392151304653252, guid: 3befbaa1b3b83f243a244d723a27c16e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 6202707063309571668, guid: 3befbaa1b3b83f243a244d723a27c16e,
         type: 3}

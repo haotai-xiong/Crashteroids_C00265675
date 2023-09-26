@@ -42,6 +42,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject asteroid2;
     [SerializeField] private GameObject asteroid3;
     [SerializeField] private GameObject asteroid4;
+    [SerializeField] private GameObject asteroidExplosion;
 
     private Vector3 spawnPosition;
     private AudioSource audioSource;
@@ -96,6 +97,13 @@ public class Spawner : MonoBehaviour
         asteroid.SetActive(true);
         SetPosition(asteroid);
         return asteroid;
+    }
+
+    public GameObject SpawnAsteroidExplosion(Vector3 t_pos)
+    {
+        GameObject t_explosion = Instantiate(asteroidExplosion, t_pos, Quaternion.identity);
+        t_explosion.SetActive(true);
+        return t_explosion;
     }
 
     private void SetPosition(GameObject asteroid)

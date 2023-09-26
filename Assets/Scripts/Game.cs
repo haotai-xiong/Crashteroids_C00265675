@@ -30,6 +30,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 public class Game : MonoBehaviour
 {
@@ -42,9 +43,11 @@ public class Game : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private GameObject titleText;
     [SerializeField] private Spawner spawner;
-    [SerializeField] private GameObject asteroidExplosion;
+    //[SerializeField] private GameObject asteroidExplosion;
 
     private static Game instance;
+
+    public static Game GetInstance() { return instance; }
 
 
     private void Start()
@@ -90,8 +93,7 @@ public class Game : MonoBehaviour
     public static void AsteroidExplode(Vector3 t_pos)
     {
         // Debug.Log("Asteroid Explode Function Triggered");
-        GameObject t_explosion = Instantiate(instance.asteroidExplosion, t_pos, Quaternion.identity);
-        t_explosion.SetActive(true);
+        GameObject t_explosion = instance.spawner.SpawnAsteroidExplosion(t_pos);
     }
 
     public Ship GetShip()

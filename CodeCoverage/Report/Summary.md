@@ -1,29 +1,30 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 25/09/2023 - 12:08:43 |
+| Generated on: | 26/09/2023 - 16:42:04 |
 | Parser: | MultiReportParser (2x OpenCoverParser) |
 | Assemblies: | 2 |
-| Classes: | 6 |
-| Files: | 6 |
-| Covered lines: | 222 |
-| Uncovered lines: | 38 |
-| Coverable lines: | 260 |
-| Total lines: | 619 |
-| Line coverage: | 85.3% (222 of 260) |
+| Classes: | 7 |
+| Files: | 7 |
+| Covered lines: | 60 |
+| Uncovered lines: | 229 |
+| Coverable lines: | 289 |
+| Total lines: | 680 |
+| Line coverage: | 20.7% (60 of 289) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 44 |
-| Total methods: | 46 |
-| Method coverage: | 95.6% (44 of 46) |
+| Covered methods: | 14 |
+| Total methods: | 52 |
+| Method coverage: | 26.9% (14 of 52) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**GameAssembly**|**151**|**38**|**189**|**470**|**79.8%**|**0**|**0**|****|**32**|**34**|**94.1%**|
-|Asteroid|20|0|20|62|100%|0|0||5|5|100%|
-|Game|40|0|40|97|100%|0|0||7|7|100%|
-|Laser|13|3|16|56|81.2%|0|0||2|2|100%|
-|Ship|38|29|67|132|56.7%|0|0||10|12|83.3%|
-|Spawner|40|6|46|123|86.9%|0|0||8|8|100%|
-|**Tests**|**71**|**0**|**71**|**149**|**100%**|**0**|**0**|****|**12**|**12**|**100%**|
-|TestSuite|71|0|71|149|100%|0|0||12|12|100%|
+|**GameAssembly**|**45**|**165**|**210**|**511**|**21.4%**|**0**|**0**|****|**11**|**39**|**28.2%**|
+|Asteroid|0|20|20|62|0%|0|0||0|5|0%|
+|AutoDestroyParticleSystem|6|3|9|19|66.6%|0|0||2|2|100%|
+|Game|15|29|44|108|34%|0|0||4|9|44.4%|
+|Laser|0|17|17|57|0%|0|0||0|2|0%|
+|Ship|13|56|69|134|18.8%|0|0||3|12|25%|
+|Spawner|11|40|51|131|21.5%|0|0||2|9|22.2%|
+|**Tests**|**15**|**64**|**79**|**169**|**18.9%**|**0**|**0**|****|**3**|**13**|**23%**|
+|TestSuite|15|64|79|169|18.9%|0|0||3|13|23%|
