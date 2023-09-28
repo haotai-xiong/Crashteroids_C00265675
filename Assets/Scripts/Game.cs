@@ -30,6 +30,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 public class Game : MonoBehaviour
 {
@@ -44,13 +45,14 @@ public class Game : MonoBehaviour
     [SerializeField] private Text livesText;
     [SerializeField] private GameObject titleText;
     [SerializeField] private Spawner spawner;
+    //[SerializeField] private GameObject asteroidExplosion;
 
     float shipImmunityTimer = 3f;
     public bool immune = false;
 
     private static Game instance;
 
-    public static Game GetGame() { return instance; }
+    public static Game GetInstance() { return instance; }
 
 
     private void Start()
@@ -110,6 +112,12 @@ public class Game : MonoBehaviour
     {
         instance.score++;
         instance.scoreText.text = $"Score: {instance.score}";
+    }
+
+    public static void AsteroidExplode(Vector3 t_pos)
+    {
+        // Debug.Log("Asteroid Explode Function Triggered");
+        GameObject t_explosion = instance.spawner.SpawnAsteroidExplosion(t_pos);
     }
 
     public Ship GetShip()
