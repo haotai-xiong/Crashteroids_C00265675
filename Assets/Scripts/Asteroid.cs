@@ -52,10 +52,14 @@ public class Asteroid : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {if (collision.gameObject.name == "ShipModel")
+    {
+		if (collision.gameObject.name == "ShipModel")
         {
-            Game.AsteroidExplode(gameObject.transform.position);
-            Game.GameOver();
+            Game.GetInstance().AsteroidExplode(gameObject.transform.position);
+            if (!Game.GetInstance().immune)
+            {
+                Game.GetInstance().DepleteLife();
+            }
             Destroy(gameObject);
         }
     }
