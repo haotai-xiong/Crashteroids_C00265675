@@ -35,7 +35,7 @@ using static UnityEditor.PlayerSettings;
 public class Game : MonoBehaviour
 {
     public int score = 0;
-    public int lives = 3;
+    private int lives = 3;
     public bool isGameOver = false;
 
     [SerializeField] private GameObject shipModel;
@@ -53,6 +53,8 @@ public class Game : MonoBehaviour
     private static Game instance;
 
     public static Game GetInstance() { return instance; }
+
+    public int Lives {  get { return lives; } set { lives = value; } }
 
 
     private void Start()

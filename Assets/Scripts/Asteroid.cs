@@ -55,7 +55,7 @@ public class Asteroid : MonoBehaviour
     {
 		if (collision.gameObject.name == "ShipModel")
         {
-            Game.AsteroidExplode(gameObject.transform.position);
+            Game.GetInstance().AsteroidExplode(gameObject.transform.position);
             if (!Game.GetInstance().immune)
             {
                 Game.GetInstance().DepleteLife();

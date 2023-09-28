@@ -1,30 +1,30 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 28/09/2023 - 16:35:12 |
+| Generated on: | 28/09/2023 - 16:50:49 |
 | Parser: | MultiReportParser (4x OpenCoverParser) |
 | Assemblies: | 2 |
 | Classes: | 7 |
-| Files: | 13 |
-| Covered lines: | 244 |
-| Uncovered lines: | 281 |
-| Coverable lines: | 525 |
-| Total lines: | 740 |
-| Line coverage: | 46.4% (244 of 525) |
+| Files: | 14 |
+| Covered lines: | 362 |
+| Uncovered lines: | 308 |
+| Coverable lines: | 670 |
+| Total lines: | 743 |
+| Line coverage: | 54% (362 of 670) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 59 |
-| Total methods: | 100 |
-| Method coverage: | 59% (59 of 100) |
+| Covered methods: | 71 |
+| Total methods: | 112 |
+| Method coverage: | 63.3% (71 of 112) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**GameAssembly**|**175**|**202**|**377**|**553**|**46.4%**|**0**|**0**|****|**44**|**74**|**59.4%**|
-|Asteroid|15|22|37|66|40.5%|0|0||6|10|60%|
-|AutoDestroyParticleSystem|0|9|9|19|0%|0|0||0|2|0%|
-|Game|58|47|105|146|55.2%|0|0||10|17|58.8%|
-|Laser|9|18|27|57|33.3%|0|0||2|4|50%|
-|Ship|47|68|115|134|40.8%|0|0||14|24|58.3%|
-|Spawner|46|38|84|131|54.7%|0|0||12|17|70.5%|
-|**Tests**|**69**|**79**|**148**|**187**|**46.6%**|**0**|**0**|****|**15**|**26**|**57.6%**|
-|TestSuite|69|79|148|187|46.6%|0|0||15|26|57.6%|
+|**GameAssembly**|**262**|**229**|**491**|**555**|**53.3%**|**0**|**0**|****|**54**|**84**|**64.2%**|
+|Asteroid|26|22|48|66|54.1%|0|0||6|10|60%|
+|AutoDestroyParticleSystem|9|9|18|19|50%|0|0||2|4|50%|
+|Game|93|58|151|148|61.5%|0|0||17|24|70.8%|
+|Laser|14|20|34|57|41.1%|0|0||2|4|50%|
+|Ship|59|79|138|134|42.7%|0|0||14|24|58.3%|
+|Spawner|61|41|102|131|59.8%|0|0||13|18|72.2%|
+|**Tests**|**100**|**79**|**179**|**188**|**55.8%**|**0**|**0**|****|**17**|**28**|**60.7%**|
+|TestSuite|100|79|179|188|55.8%|0|0||17|28|60.7%|

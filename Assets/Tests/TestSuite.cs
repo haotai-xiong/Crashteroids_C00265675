@@ -41,6 +41,7 @@ public class TestSuite
     {
         GameObject asteroid = game.GetSpawner().SpawnAsteroid();
         //1
+        game.Lives = 1;
         asteroid.transform.position = game.GetShip().transform.position;
         //2
         yield return new WaitForSeconds(0.1f);
