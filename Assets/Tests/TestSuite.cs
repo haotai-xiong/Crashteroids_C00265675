@@ -185,4 +185,28 @@ public class TestSuite
         // 3
         Assert.IsFalse(particleSystem.isPlaying);
     }
+
+    [UnityTest]
+    public IEnumerator ShipMoveUp()
+    {
+        // 1
+        Vector3 initPos = game.GetShip().transform.position;
+        game.GetShip().MoveUp();
+        yield return new WaitForSeconds(0.1f);
+
+        // 2
+        Assert.Less(game.GetShip().transform.position.z, initPos.z);
+    }
+
+    [UnityTest]
+    public IEnumerator ShipMoveDown()
+    {
+        // 1
+        Vector3 initPos = game.GetShip().transform.position;
+        game.GetShip().MoveDown();
+        yield return new WaitForSeconds(0.1f);
+
+        // 2
+        Assert.Greater(game.GetShip().transform.position.z, initPos.z);
+    }
 }
