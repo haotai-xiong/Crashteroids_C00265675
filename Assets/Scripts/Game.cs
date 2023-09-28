@@ -108,13 +108,13 @@ public class Game : MonoBehaviour
         immune = false;
     }
 
-    public static void AsteroidDestroyed()
+    public void AsteroidDestroyed()
     {
-        instance.score++;
-        instance.scoreText.text = $"Score: {instance.score}";
+        score++;
+        scoreText.text = $"Score: {instance.score}";
     }
 
-    public static void AsteroidExplode(Vector3 t_pos)
+    public void AsteroidExplode(Vector3 t_pos)
     {
         // Debug.Log("Asteroid Explode Function Triggered");
         GameObject t_explosion = instance.spawner.SpawnAsteroidExplosion(t_pos);
