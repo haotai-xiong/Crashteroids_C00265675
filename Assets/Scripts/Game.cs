@@ -34,16 +34,24 @@ using UnityEngine.UI;
 public class Game : MonoBehaviour
 {
     public int score = 0;
+    public int lives = 3;
     public bool isGameOver = false;
 
     [SerializeField] private GameObject shipModel;
     [SerializeField] private GameObject startGameButton;
     [SerializeField] private Text gameOverText;
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text livesText;
     [SerializeField] private GameObject titleText;
     [SerializeField] private Spawner spawner;
 
+    float shipImmunityTimer = 3f;
+    public bool immune = false;
+
     private static Game instance;
+
+    public static Game GetGame() { return instance; }
+
 
     private void Start()
     {
@@ -51,7 +59,21 @@ public class Game : MonoBehaviour
         titleText.SetActive(true);
         gameOverText.enabled = false;
         scoreText.enabled = false;
+        livesText.enabled = false;
         startGameButton.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if (immune)
+        {
+            shipImmunityTimer -= Time.deltaTime;
+            if (shipImmunityTimer < 0)
+            {
+                immune = false;
+                shipImmunityTimer = 3f;
+            }
+        }
     }
 
     public static void GameOver()
@@ -77,6 +99,11 @@ public class Game : MonoBehaviour
         shipModel.GetComponent<Ship>().RepairShip();
         spawner.ClearAsteroids();
         gameOverText.enabled = false;
+        lives = 3;
+        livesText.text = $"Lives: {lives}";
+        livesText.enabled = true;
+        shipImmunityTimer = 3f;
+        immune = false;
     }
 
     public static void AsteroidDestroyed()
@@ -93,5 +120,19 @@ public class Game : MonoBehaviour
     public Spawner GetSpawner()
     {
         return spawner.GetComponent<Spawner>();
+    }
+
+    public void DepleteLife()
+    {
+        lives -= 1;
+        livesText.text = $"Lives: {lives}";
+        if (lives <= 0)
+        {
+            GameOver();
+        }
+        else
+        {
+            immune = true;
+        }
     }
 }
