@@ -190,23 +190,23 @@ public class TestSuite
     public IEnumerator ShipMoveUp()
     {
         // 1
-        Vector3 initPos = game.GetShip().transform.position;
+        Vector3 initPos = game.GetShip().transform.localPosition;
         game.GetShip().MoveUp();
         yield return new WaitForSeconds(0.1f);
 
         // 2
-        Assert.Less(game.GetShip().transform.position.z, initPos.z);
+        Assert.Less(game.GetShip().transform.localPosition.z, initPos.z);
     }
 
     [UnityTest]
     public IEnumerator ShipMoveDown()
     {
         // 1
-        Vector3 initPos = game.GetShip().transform.position;
+        Vector3 initPos = game.GetShip().transform.localPosition;
         game.GetShip().MoveDown();
         yield return new WaitForSeconds(0.1f);
 
         // 2
-        Assert.Greater(game.GetShip().transform.position.z, initPos.z);
+        Assert.Greater(game.GetShip().transform.localPosition.z, initPos.z);
     }
 }
